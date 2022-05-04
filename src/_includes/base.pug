@@ -6,13 +6,14 @@ html(lang="en")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
     title= title
     link(rel="stylesheet", href="/css/style.css")
+    script(src="/js/main.js" defer)   
   body
     header 
       h1= title
       //- TODO: replace with real logo
       .logo
     main  
-      if page.url == '/'
+      if page.url === '/'
         include intro.pug        
       block content
     include footer

@@ -1,4 +1,3 @@
-//- mixin for navigation sections
 mixin navSection(title) 
   div(class=`${title} nav-section`)
     .section-header 
@@ -14,3 +13,11 @@ mixin navSection(title)
         </defs>
       </svg>
     block
+
+mixin skillsList(title, [...listItems])  
+  h4= title
+    .line        
+  ul 
+    each listItem in listItems 
+      li= listItem
+

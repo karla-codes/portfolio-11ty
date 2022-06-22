@@ -8,13 +8,10 @@ include ./_includes/mixins
 
 
 block content
-  nav 
-    +navSection('about')
-      include ./_includes/about
-    +navSection('projects')
-      include ./_includes/projects
-    +navSection('contact')
-      include ./_includes/contact
+  +navSection('about')
+    include ./_includes/about
+  +navSection('projects')
+    include ./_includes/projects
      
 
 

@@ -1,2 +1,6 @@
-.section-content.display-toggle 
+.section-content
   p This is the projects section
+  ul 
+    each project in collections.projects 
+      li 
+        a(href=project.url)= project.data.title

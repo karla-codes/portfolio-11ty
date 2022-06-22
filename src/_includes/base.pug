@@ -8,10 +8,7 @@ html(lang="en")
     link(rel="stylesheet", href="/css/style.css")
     script(src="/js/main.js" defer)   
   body
-    header 
-      h1= title
-      //- TODO: replace with real logo
-      .logo
+    include nav
     main  
       if page.url === '/'
         include intro.pug        

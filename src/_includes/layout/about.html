@@ -1,0 +1,9 @@
+{% extends "layout/base.html" %} {% block content %}
+<article class="about">
+  <div class="about__container">
+    {{ content | safe }}
+    <img src="{{ imageURL }}" alt="{{ imageAlt }}" />
+  </div>
+</article>
+
+{% endblock %}

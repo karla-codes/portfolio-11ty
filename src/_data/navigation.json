@@ -11,6 +11,10 @@
     {
       "text": "Services",
       "url": "/services"
+    },
+    {
+      "text": "hi@karla.codes",
+      "url": "mailto:hi@karla.codes"
     }
   ]
 }

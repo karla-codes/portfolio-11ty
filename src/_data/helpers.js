@@ -3,8 +3,11 @@ module.exports = {
    * Returns some attributes based on whether the
    * link is active or a parent of an active item
    *
+   * @param {string} itemUrl
+   * @param {string} pageUrl
+   * @returns {string} attributes or empty
+   *
    */
-
   getLinkActiveState(itemUrl, pageUrl) {
     let response = ""
 

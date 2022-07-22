@@ -1,7 +1,7 @@
 {
   "items": [
     {
-      "text": "Work",
+      "text": "Home",
       "url": "/"
     },
     {
@@ -9,8 +9,8 @@
       "url": "/about"
     },
     {
-      "text": "Services",
-      "url": "/services"
+      "text": "Work",
+      "url": "/work"
     },
     {
       "text": "hi@karla.codes",

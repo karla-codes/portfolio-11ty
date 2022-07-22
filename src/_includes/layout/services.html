@@ -1,14 +1,14 @@
 {% extends "layout/base.html" %} {% block content %}
-<article class="services">
+<article class="services wrapper">
   <div class="services__container">
     {{ content | safe }}
     <div class="services__cards">
       {% for service in services %}
-      <div class="card">
+      <div class="service">
         <h2>{{ service.title }}</h2>
         <p>{{ service.summary }}</p>
         <p><em>{{ service.note }}</em></p>
-        <div class="card__list">
+        <div class="service-list">
           <p>What you get:</p>
           <ul>
             {% for item in service.items %}
@@ -20,8 +20,6 @@
       {% endfor %}
     </div>
   </div>
-  <div class="services__cta">
-    <h2>{{ cta }}</h2>
-  </div>
+  <div class="services__cta"></div>
 </article>
 {% endblock %}

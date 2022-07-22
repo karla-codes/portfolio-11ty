@@ -1,0 +1,13 @@
+{% extends "layout/base.html" %} {% block content %}
+<article class="work wrapper">
+  <div class="project-container">
+    {% for item in collections.projects %}
+    <div class="card">
+      <h2>{{ item.data.title }}</h2>
+      <p>{{ item.data.summary }}</p>
+      <a href="{{ item.url }}">View Project</a>
+    </div>
+    {% endfor%}
+  </div>
+</article>
+{% endblock %}

@@ -1,0 +1,12 @@
+@use "../layout/utilities";
+
+.skip-link {
+  position: absolute;
+  top: var(--base-size);
+  left: var(--base-size);
+  z-index: 99;
+
+  &:not(:focus) {
+    @extend .visually-hidden;
+  }
+}

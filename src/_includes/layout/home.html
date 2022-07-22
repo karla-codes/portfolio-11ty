@@ -1,13 +1,30 @@
 {% extends "layout/base.html" %} {% block content %}
-<article class="work section">
-  <div class="work__wrapper">
-    {% for item in collections.projects %}
-    <div class="project__card">
+<article class="intro wrapper flow">
+  <h1>{{ intro }}</h1>
+  <p>{{ subIntro }}</p>
+  <p>
+    <a href="/about">More About Me →</a>
+  </p>
+</article>
+<article class="featured wrapper">
+  <h2>{{ featured.title }}</h2>
+  <div class="project-container">
+    {% for item in collections.projects %} {% if item.data.featured == true %}
+    <div class="card">
       <h2>{{ item.data.title }}</h2>
       <p>{{ item.data.summary }}</p>
       <a href="{{ item.url }}">View Project</a>
     </div>
-    {% endfor%}
+    {% endif %} {% endfor %}
   </div>
 </article>
+<article class="skills wrapper">
+  <h2>{{ skills.title }}</h2>
+  <ul>
+    {% for item in skills.list %}
+    <li>{{ item }}</li>
+    {% endfor %}
+  </ul>
+</article>
+
 {% endblock %}

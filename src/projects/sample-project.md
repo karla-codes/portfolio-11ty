@@ -1,7 +1,8 @@
 ---
 title: "Project Title"
 summary: "This is a sample summary for a sample project"
-displayOrder: 1
+cardImage: ""
+featured: true
 projectDetails:
   clientName: "Client Name"
   services: ["Web Design", " Web Development"]

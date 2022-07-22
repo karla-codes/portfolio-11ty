@@ -23,7 +23,6 @@ services:
         "Color Scheme",
         "Typography",
       ]
-cta: "Ready to establish your corner of the web? Let me know how I can support you and your business  at [hi@karla.codes](mailto:hi@karla.codes). I can’t wait to meet you!"
 ---
 
 # If building an authentic, user-friendly experience for your business is the goal, you’ve come to the right place.

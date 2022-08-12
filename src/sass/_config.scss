@@ -11,7 +11,7 @@
   --base-size: 1rem;
   --size-1: calc(var(--base-size) * 1.333);
   --size-2: calc(var(--base-size) * 1.777);
-  --size-3: var(--base-size) * 2.369;
+  --size-3: calc(var(--base-size) * 2.369);
   --flow-space: var(--size-2);
 
   --color-dark: #1a1a1a;

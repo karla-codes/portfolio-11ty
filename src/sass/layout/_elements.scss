@@ -1,6 +1,60 @@
+html,
+body {
+  overflow-x: hidden;
+}
+
 body {
   background: var(--color-light);
   color: var(--color-dark);
+}
+
+.site-head {
+  padding: var(--size-2) 0;
+
+  &__inner {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__logo {
+    margin-inline-end: 1rem;
+  }
+
+  &__nav {
+    padding: var(--size-2) 0;
+
+    ul {
+      display: flex;
+      flex-wrap: wrap;
+
+      li:not(:last-of-type) {
+        padding-right: 1rem;
+      }
+    }
+  }
+}
+
+nav a {
+  text-decoration: none;
+
+  &[aria-current="page"],
+  &[data-state="active"] {
+    // font-weight: bold;
+    text-decoration: underline;
+    text-underline-offset: 5px;
+  }
+}
+
+.intro {
+  h1 {
+    margin-block-end: var(--size-2);
+  }
+
+  &__container {
+    padding-block: var(--size-2);
+  }
 }
 
 // $wrapper-width: 85%;

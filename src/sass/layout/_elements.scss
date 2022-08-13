@@ -8,6 +8,14 @@ body {
   color: var(--color-dark);
 }
 
+main {
+  margin-top: 6rem;
+}
+
+article {
+  margin-block-end: 8rem;
+}
+
 .site-head {
   padding: var(--size-2) 0;
 
@@ -21,18 +29,15 @@ body {
   &__logo {
     margin-inline-end: 1rem;
   }
+}
 
-  &__nav {
-    padding: var(--size-2) 0;
+.nav__list {
+  display: flex;
+  flex-wrap: wrap;
+  padding: var(--size-2) 0;
 
-    ul {
-      display: flex;
-      flex-wrap: wrap;
-
-      li:not(:last-of-type) {
-        padding-right: 1rem;
-      }
-    }
+  li:not(:last-of-type) {
+    padding-right: 1rem;
   }
 }
 
@@ -41,19 +46,8 @@ nav a {
 
   &[aria-current="page"],
   &[data-state="active"] {
-    // font-weight: bold;
     text-decoration: underline;
     text-underline-offset: 5px;
-  }
-}
-
-.intro {
-  h1 {
-    margin-block-end: var(--size-2);
-  }
-
-  &__container {
-    padding-block: var(--size-2);
   }
 }
 

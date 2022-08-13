@@ -3,8 +3,39 @@ h2,
 h3,
 h4 {
   font-weight: 500;
-  font-family: var(--font-large);
+  font-family: var(--font-small);
   line-height: 1.1;
+}
+
+h2 {
+  font-size: var(--size-1);
+  font-family: var(--font-large);
+  font-weight: 500;
+}
+
+article > h2 {
+  margin-block-end: var(--size-3);
+}
+
+a {
+  font-family: var(--font-large);
+  font-size: var(--base-size);
+  text-decoration: none;
+}
+
+sup {
+  font-size: 1rem;
+}
+
+.intro {
+  h1 {
+    font-size: clamp(var(--size-2), 8vmin, 3rem);
+  }
+
+  &__sub {
+    font-size: clamp(var(--size-2), 8vmin, 2.5rem);
+    line-height: 1.2;
+  }
 }
 
 // h1 {

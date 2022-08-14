@@ -1,5 +1,27 @@
 .card {
-  // outline: 1px red solid;
+  border-top: 1px solid black;
   padding: var(--size-1) 0;
-  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  &:last-of-type {
+    border-bottom: 1px solid black;
+  }
+
+  h2 {
+    font-family: var(--font-small);
+    font-size: clamp(1.5rem, 8vmin, 3rem);
+    text-transform: uppercase;
+    margin: 0;
+  }
+
+  p {
+    font-size: var(--base-size);
+  }
+
+  a {
+    font-size: var(--base-size);
+    padding-block-start: 1rem;
+  }
 }

@@ -1,10 +1,9 @@
 {% extends "layout/base.html" %} {% block content %}
 <article class="project wrapper">
   <div class="project__details">
-    <h2>{{ title }}</h2>
+    <h1>{{ title }}</h1>
     <p>{{ summary }}</p>
-    <p><strong>Client:</strong> {{ projectDetails.clientName }}</p>
-    <p><strong>Services:</strong> {{ projectDetails.services }}</p>
+    <p><strong>Tech Stack:</strong> {{ projectDetails.techStack }}</p>
   </div>
   <div class="project__section">
     <h2>{{ objective.title }}</h2>

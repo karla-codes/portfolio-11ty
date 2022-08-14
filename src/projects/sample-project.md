@@ -1,11 +1,10 @@
 ---
-title: "Project Title"
+title: "Mass Effect Codex API"
 summary: "This is a sample summary for a sample project"
 cardImage: ""
 featured: true
 projectDetails:
-  clientName: "Client Name"
-  services: ["Web Design", " Web Development"]
+  techStack: ["Web Design", " Web Development"]
   yearCompleted: 2022
 objective:
   title: "Objective"

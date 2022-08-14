@@ -1,30 +1,60 @@
 {% extends "layout/base.html" %} {% block content %}
-<article class="intro wrapper flow">
-  <h1>{{ intro }}</h1>
-  <p>{{ subIntro }}</p>
-  <p>
-    <a href="/about">More About Me →</a>
-  </p>
+<article class="intro wrapper flow" id="about">
+  <div class="intro__container flow">
+    <h1>{{ intro | safe }}</h1>
+    <div class="intro__sub">
+      <p>{{ subIntro | safe }}</p>
+    </div>
+    {% for item in about %}
+    <p>{{ item }}</p>
+    {% endfor %}
+    <!-- <p>
+      <a href="/about">Read more about me →</a>
+    </p> -->
+  </div>
 </article>
-<article class="featured wrapper">
+<article class="featured wrapper" id="work">
   <h2>{{ featured.title }}</h2>
   <div class="project-container">
     {% for item in collections.projects %} {% if item.data.featured == true %}
     <div class="card">
-      <h2>{{ item.data.title }}</h2>
-      <p>{{ item.data.summary }}</p>
+      <div>
+        <h2>{{ item.data.title }}</h2>
+        <!-- <p>{{ item.data.summary }}</p> -->
+      </div>
       <a href="{{ item.url }}">View Project</a>
     </div>
     {% endif %} {% endfor %}
   </div>
 </article>
-<article class="skills wrapper">
+<article class="skills wrapper" id="skills">
   <h2>{{ skills.title }}</h2>
-  <ul>
-    {% for item in skills.list %}
-    <li>{{ item }}</li>
-    {% endfor %}
-  </ul>
+  <div class="skills__container">
+    <div class="skills__block" id="languages">
+      <h3>Languages</h3>
+      <ul class="skills__list">
+        {% for item in skills.langList %}
+        <li>{{ item }}</li>
+        {% endfor %}
+      </ul>
+    </div>
+    <div class="skills__block" id="frameworks">
+      <h3>Libraries + Frameworks</h3>
+      <ul class="skills__list">
+        {% for item in skills.frameworkList %}
+        <li>{{ item }}</li>
+        {% endfor %}
+      </ul>
+    </div>
+    <div class="skills__block" id="tools">
+      <h3>Databases + other tools/platforms</h3>
+      <ul class="skills__list">
+        {% for item in skills.otherList %}
+        <li>{{ item }}</li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
 </article>
 
 {% endblock %}

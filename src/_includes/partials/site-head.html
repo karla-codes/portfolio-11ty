@@ -2,16 +2,14 @@
 <header role="banner" class="site-head">
   <div class="wrapper">
     <div class="site-head__inner">
-      <a href="/" aria-label="{{ site.name }} - home" class="site-head__logo">
+      <!-- <a href="/" aria-label="{{ site.name }} - home" class="site-head__logo">
         {% include "partials/logo.svg" %}
-      </a>
+      </a> -->
       <nav class="site-head__nav" aria-label="Primary">
         <ul class="nav__list">
           {% for item in navigation.items %}
           <li>
-            <a href="{{ item.url }}" {{ helpers.getLinkActiveState(item.url, page.url) | safe }}
-              >{{ item.text }}</a
-            >
+            <a href="{{ item.url }}">{{ item.text }}</a>
           </li>
           {% endfor %}
         </ul>

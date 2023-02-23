@@ -2,59 +2,53 @@
 <article class="intro wrapper flow" id="about">
   <div class="intro__container flow">
     <h1>{{ intro | safe }}</h1>
+
     <div class="intro__sub">
       <p>{{ subIntro | safe }}</p>
     </div>
     {% for item in about %}
     <p>{{ item }}</p>
     {% endfor %}
-    <!-- <p>
-      <a href="/about">Read more about me →</a>
-    </p> -->
+    <ul class="nav__list">
+      <li><a href="/about">Read more about me</a></li>
+      <li><a href="/#work">Check out my projects</a></li>
+      <li><a href="/#contact">Get in touch</a></li>
+    </ul>
   </div>
 </article>
 <article class="featured wrapper" id="work">
   <h2>{{ featured.title }}</h2>
-  <div class="project-container">
-    {% for item in collections.projects %} {% if item.data.featured == true %}
-    <div class="card">
-      <div>
-        <h2>{{ item.data.title }}</h2>
-        <!-- <p>{{ item.data.summary }}</p> -->
-      </div>
-      <a href="{{ item.url }}">View Project</a>
-    </div>
-    {% endif %} {% endfor %}
-  </div>
+  <ul role="list" class="projects">
+    {% include 'partials/project-card.html' %}
+  </ul>
 </article>
 <article class="skills wrapper" id="skills">
   <h2>{{ skills.title }}</h2>
-  <div class="skills__container">
-    <div class="skills__block" id="languages">
+  <ul class="skills__container">
+    <li class="skills__block" id="languages">
       <h3>Languages</h3>
-      <ul class="skills__list">
+      <ul role="list" class="skills__list">
         {% for item in skills.langList %}
         <li>{{ item }}</li>
         {% endfor %}
       </ul>
-    </div>
-    <div class="skills__block" id="frameworks">
+    </li>
+    <li class="skills__block" id="frameworks">
       <h3>Libraries + Frameworks</h3>
-      <ul class="skills__list">
+      <ul role="list" class="skills__list">
         {% for item in skills.frameworkList %}
         <li>{{ item }}</li>
         {% endfor %}
       </ul>
-    </div>
-    <div class="skills__block" id="tools">
+    </li>
+    <li class="skills__block" id="tools">
       <h3>Databases + other tools/platforms</h3>
-      <ul class="skills__list">
+      <ul role="list" class="skills__list">
         {% for item in skills.otherList %}
         <li>{{ item }}</li>
         {% endfor %}
       </ul>
-    </div>
-  </div>
+    </li>
+  </ul>
 </article>
-
-{% endblock %}
+{% include 'partials/contact.html' %} {% endblock %}

@@ -1,0 +1,12 @@
+{% for item in collections.projects %} {% if item.data.featured == true %}
+<li class="card">
+  <h2>
+    <a href="{{ item.url }}">{{ item.data.title }}<span>↗</span></a>
+  </h2>
+  <p>{{ item.data.summary }}</p>
+  <div class="source-links">
+    <a href="{{ item.data.liveSite }}">View Live Site</a>
+    <a href="{{ item.data.sourceCode }}">View Source Code</a>
+  </div>
+</li>
+{% endif %} {% endfor %}

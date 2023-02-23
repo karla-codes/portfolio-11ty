@@ -1,0 +1,139 @@
+---
+title: "Mass Effect Codex API"
+summary: "REST API for the Mass Effect codex entries."
+liveSite: "https://mass-effect-api.fly.dev"
+sourceCode: "https://github.com/karla-codes/mass-effect-api"
+mainImage: "/images/mass-effect-api.png"
+mainImageAlt: "Mass Effect Codex API welcome page"
+featured: true
+projectDetails:
+  techStack:
+    [
+      { name: "Express", tag: "framework" },
+      { name: "Mongoose", tag: "tools" },
+      { name: "MongoDB", tag: "tools" },
+      { name: "Fly", tag: "tools" },
+    ]
+  yearCompleted: 2022
+features:
+  title: "Features"
+motivation:
+  title: "Motivation"
+---
+
+<div class="project__details flow">
+  <div class="project__section flow">
+    <h2>{{ features.title }}</h2>
+    <ul class="styled-list">
+      <li>Uses MongoDB for the database and Mongoose as the ODM</li>
+      <li>READ only capabilities</li>
+    </ul>
+  </div>
+  <div class="project__section flow">
+    <h2>{{ motivation.title }}</h2>
+    <p>
+      While building the <a href="/projects/mass-effect-codex">Mass Effect Codex</a> site, I
+      realized there was no API available for Mass Effect content. Instead of pulling codex content
+      from a data file within my project, I thought it would be a great learning experience to build
+      a REST API that could potentially be used by others.
+    </p>
+    <p>Below are all the available requests:</p>
+    <p>
+      <span>GET</span> - Get all entries
+      <pre><code>/api/entries/all</code></pre>
+    </p>
+    <p>
+      <span>GET</span> - Get all entries in Primary category
+      <pre><code>/api/entries/primary</code></pre>
+    </p>
+    <p>
+      <span>GET</span> - Get all entries in Secondary category
+      <pre><code>/api/entries/secondary</code></pre>
+    </p>
+    <p>
+      <span>GET</span> - Get all entries from a specific Subject
+      <pre><code>/api/entries/:subjectId</code></pre>
+      
+    </p>
+    <p>
+      <span>GET</span> - Get all entries from a specific subject in the Primary category
+      <pre><code>/api/entries/primary/:subjectId</code></pre>
+    </p>
+    <p>
+      <span>GET</span> - Get all entries from a specific subject in the Secondary category
+
+      <pre><code>/api/entries/secondary/:subjectId</code></pre>
+    </p>
+    <table>
+      <tr>
+        <th>Subject</th>
+        <th>Id</th>
+      </tr>
+      <tr>
+        <td>Aliens: Council Races</td>
+        <td>1</td>
+      </tr>
+      <tr>
+        <td>Aliens: Extinct Races</td>
+        <td>2</td>
+      </tr>
+      <tr>
+        <td>Aliens: Non-Council Races</td>
+        <td>3</td>
+      </tr>
+      <tr>
+        <td>Aliens: Non-Sapient Creatures</td>
+        <td>4</td>
+      </tr>
+      <tr>
+        <td>Citadel and Galactic Government</td>
+        <td>5</td>
+      </tr>
+      <tr>
+        <td>Humanity and the Systems Alliance</td>
+        <td>6</td>
+      </tr>
+      <tr>
+        <td>Known Associates</td>
+        <td>7</td>
+      </tr>
+      <tr>
+        <td>Organizations</td>
+        <td>8</td>
+      </tr>
+      <tr>
+        <td>Personal History Summary</td>
+        <td>9</td>
+      </tr>
+      <tr>
+        <td>Planets and Locations</td>
+        <td>10</td>
+      </tr>
+      <tr>
+        <td>Publications</td>
+        <td>11</td>
+      </tr>
+      <tr>
+        <td>Ships and Vehicles</td>
+        <td>12</td>
+      </tr>
+      <tr>
+        <td>Technology</td>
+        <td>13</td>
+      </tr>
+      <tr>
+        <td>The Reapers</td>
+        <td>14</td>
+      </tr>
+      <tr>
+        <td>Weapons, Armor and Equipment</td>
+        <td>15</td>
+      </tr>
+    </table>
+    <ul class="styled-list">
+      {% for item in motivation.list %}
+      <li>{{ item }}</li>
+      {% endfor %}
+    </ul>
+  </div>
+</div>

@@ -1,0 +1,70 @@
+---
+title: "Mass Effect Codex"
+summary: "Web app that displays codex entries from the Mass Effect video game series."
+liveSite: "https://sparkly-sunburst-3abda9.netlify.app/"
+sourceCode: "https://github.com/karla-codes/mass-effect-codex"
+mainImage: "/images/mass-effect-codex-1.png"
+mainImageAlt: "Mass Effect Codex homepage"
+featured: true
+projectDetails:
+  techStack:
+    [
+      { name: "Sass", tag: "languages" },
+      { name: "React", tag: "framework" },
+      { name: "Netlify", tag: "tools" },
+    ]
+  yearCompleted: 2022
+features:
+  title: "Features"
+motivation:
+  title: "Motivation"
+  list:
+    [
+      "Prioritize accessibility",
+      "Make it responsive and mobile friendly",
+      "Create a simple design with a Mass Effect aesthetic",
+      "Use tech that I'm curious about/want to improve on",
+    ]
+  image: "/images/"
+---
+
+<div class="project__details flow">
+  <div class="project__section flow">
+    <h2>{{ features.title }}</h2>
+    <ul class="styled-list">
+      <li>
+        Every entry is divided into one of fifteen subjects and categorized as either Primary or
+        Secondary.
+      </li>
+      <li>
+        You can sort all entries by Category or Subject in addition to viewing them all in
+        alphabetical order.
+      </li>
+      <li>
+        All data is pulled from the
+        <a href="/projects/mass-effect-rest-api">Mass Effect Codex API</a> I created along with this
+        web app.
+      </li>
+    </ul>
+  </div>
+  <div class="project__section flow">
+    <h2>{{ motivation.title }}</h2>
+    <p>
+      I'm a big fan of the Mass Effect video games and during my last playthrough, I realized that
+      I'd only ever read a handful of the 200+ codex entries. My desire to finally read all of the
+      codex entries grew and with that came the idea of creating a codex that I could view outside
+      of the games.
+    </p>
+    <p>
+      I found a <a href="https://n7hq.masseffect.com/codex/">website</a> EA had built that mimicked
+      the the layout of the codex in game. I noticed that the desktop version was not responsive and
+      lacked important accessibility features, like the ability to use the tab key to navigate
+      through the site. So I decided to build a simple codex with the following goals in mind:
+    </p>
+    <ul class="styled-list">
+      {% for item in motivation.list %}
+      <li>{{ item }}</li>
+      {% endfor %}
+    </ul>
+  </div>
+</div>

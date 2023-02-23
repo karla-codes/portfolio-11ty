@@ -1,0 +1,41 @@
+---
+title: "Art Blog"
+summary: "My personal art blog built with Eleventy and Netlify CMS."
+liveSite: "https://www.karlawalker.art/"
+sourceCode: "https://github.com/karla-codes/art-blog-11ty"
+mainImage: "/images/art-blog.png"
+mainImageAlt: "Karla Walker's art blog homepage"
+featured: true
+projectDetails:
+  techStack:
+    [
+      { name: "Sass", tag: "languages" },
+      { name: "Nunjucks", tag: "tools" },
+      { name: "Eleventy", tag: "tools" },
+      { name: "Netlify", tag: "tools" },
+      { name: "Netlify CMS", tag: "tools" },
+    ]
+  yearCompleted: 2022
+features:
+  title: "Features"
+motivation:
+  title: "Motivation"
+---
+
+<div class="project__details">
+  <div class="project__section flow">
+    <h2>{{ features.title }}</h2>
+    <ul class="styled-list">
+      <li>Uses the headless Netlify CMS for easy editing</li>
+      <li>View art posts in a grid and click to view entire blog post</li>
+    </ul>
+  </div>
+  <div class="project__section flow">
+    <h2>{{ motivation.title }}</h2>
+    <p>
+      I love to draw and dabble with 3D on my free time and thought it would be fun to create an art
+      blog to post the things I make. This was also a great opportunity to understand how a CMS
+      works and how to implement one with an existing frontend.
+    </p>
+  </div>
+</div>

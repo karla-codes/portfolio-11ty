@@ -1,33 +1,22 @@
 {% extends "layout/base.html" %} {% block content %}
 <article class="project wrapper">
-  <div class="project__details">
+  <div class="project__summary">
     <h1>{{ title }}</h1>
     <p>{{ summary }}</p>
-    <p><strong>Tech Stack:</strong> {{ projectDetails.techStack }}</p>
+    <div class="source-links">
+      <a href="{{ liveSite }}">View Live Site</a>
+      <a href="{{ sourceCode }}">View Source Code</a>
+    </div>
+    <div class="project__tech">
+      <p><strong>Tech Stack:</strong></p>
+      <ul class="skills__list">
+        {% for item in projectDetails.techStack %}
+        <li class="{{ item.tag }}">{{ item.name }}</li>
+        {% endfor %}
+      </ul>
+    </div>
   </div>
-  <div class="project__section">
-    <h2>{{ objective.title }}</h2>
-    <p>{{ objective.summary }}</p>
-    <figure>
-      <img src="{{ objective.image }}" alt="" />
-      <figcaption>Enter caption here</figcaption>
-    </figure>
-  </div>
-  <div class="project__section">
-    <h2>{{ process.title }}</h2>
-    <p>{{ process.summary }}</p>
-    <figure>
-      <img src="{{ process.image }}" alt="" />
-      <figcaption>Enter caption here</figcaption>
-    </figure>
-  </div>
-  <div class="project__section">
-    <h2>{{ challenges.title }}</h2>
-    <p>{{ challenges.summary }}</p>
-    <figure>
-      <img src="{{ challenges.image }}" alt="" />
-      <figcaption>Enter caption here</figcaption>
-    </figure>
-  </div>
+  <img src="{{ mainImage }}" alt="{{ mainImageAlt }}" />
+  {{ content | safe }}
 </article>
 {% endblock %}

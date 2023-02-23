@@ -9,12 +9,29 @@
   --font-small: "Karla", sans-serif;
 
   --base-size: 1rem;
+  --size-links: 1.125rem;
   --size-1: calc(var(--base-size) * 1.333);
   --size-2: calc(var(--base-size) * 1.777);
   --size-3: calc(var(--base-size) * 2.369);
   --flow-space: var(--size-3);
 
-  --color-dark: #1a1a1a;
-  --color-light: #f3f3f3;
+  --border-radius: 20px;
+
+  --color-dark: #1c073d;
+  --color-light: #f6f6fc;
   --color-dark-shade: #263147;
+  --color-borders: #af9bff;
+  --color-links: #643dff;
+  --color-links-card: #643dff;
+  --color-pills: #c5b6ff;
+
+  --color-card-background: #e2e2fe;
+
+  --color-pill-1: #9557ff;
+  --color-pill-2: #4193ff;
+  --color-pill-3: #fa4224;
+  --color-pill-bg-1: #e4ffb8;
+  --color-pill-bg-2: #b7f980;
+  --color-pill-bg-3: #b1d78b;
+  --color-pill-border: rgb(70, 70, 70);
 }

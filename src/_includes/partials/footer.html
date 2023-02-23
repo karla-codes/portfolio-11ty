@@ -1,15 +1,9 @@
 <footer class="wrapper">
-  <div class="footer__links">
-    <nav class="footer__nav">
-      <ul class="nav__list">
-        {% for item in navigation.items %}
-        <li>
-          <a href="{{ item.url }}">{{ item.text }}</a>
-        </li>
-        {% endfor %}
-      </ul>
-    </nav>
-    <p>Designed and developed by Karla Walker</p>
-    <p>Copyright 2022</p>
+  <div class="footer">
+    <p>
+      Designed and developed by Karla Walker. Made with
+      <a href="https://www.11ty.dev/">Eleventy</a>, deployed using
+      <a href="https://www.netlify.com/">Netlify</a>. © 2023
+    </p>
   </div>
 </footer>

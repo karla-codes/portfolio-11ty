@@ -48,23 +48,22 @@ a {
 
   &__inner {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
+    width: 100%;
   }
 
   &__logo {
     margin-inline-end: 1rem;
     border-bottom: unset;
-    transition: all 0.2s ease-in;
 
     svg {
       max-width: 6ch;
-    }
-
-    &:hover {
-      transform: rotate(180deg);
+      height: auto;
       transition: all 0.2s ease-in;
+
+      &:hover {
+        transform: rotate(180deg) scale(1.2);
+        transition: all 0.2s ease-in;
+      }
     }
   }
 }

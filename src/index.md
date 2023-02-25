@@ -1,7 +1,7 @@
 ---
 title: "Karla Walker"
 layout: "layout/home.html"
-intro: "Hello there! <small>👋🏼</small> <br> I'm <span>Karla Walker</span> <sup>(she/her)</sup>, a front-end focused full-stack developer."
+intro: "Hello there! <small>👋🏼</small> <br> I'm <span>Karla Walker</span> <sup>(she/her)</sup>, a front-end focused full stack developer."
 featured:
   title: "Projects"
 skills:
